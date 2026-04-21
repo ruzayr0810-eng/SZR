@@ -1,105 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>My Blog</title>
   <style>
-    <div id="disqus_thread"></div>
-<script>
-  var disqus_config = function () {
-    this.page.url = window.location.href;
-    this.page.identifier = document.title;
-  };
-  (function() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://YOUR-SHORTNAME.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
-</script>
-    body {margin:0;font-family:Arial,sans-serif;background:#f4f4f4;}
-    header {background:#222;color:#fff;padding:20px;text-align:center;}
-    nav {background:#444;padding:10px;text-align:center;}
-    nav a {color:#fff;margin:0 10px;text-decoration:none;}
-    .container {width:80%;margin:auto;padding:20px;background:#fff;}
-    article {margin-bottom:20px;border-bottom:1px solid #ddd;padding-bottom:10px;}
-    footer {background:#222;color:#fff;text-align:center;padding:10px;margin-top:20px;}
-    .ripple {
-      position:absolute;border-radius:50%;
-      background:rgba(0,200,255,0.6);
-      transform:scale(0);animation:ripple 0.6s linear;
-      pointer-events:none;
+    body {
+      font-family: Georgia, serif;
+      background: #fff;
+      color: #000;
+      margin: 40px auto;
+      max-width: 700px;
+      line-height: 1.6;
     }
-    @keyframes ripple {to{transform:scale(4);opacity:0;}}
+    header, footer {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #000;
+    }
+    .post {
+      margin-bottom: 50px;
+    }
+    .post h2 {
+      margin-bottom: 5px;
+    }
+    .post p.date {
+      color: #555;
+      font-size: 0.9em;
+      margin-top: 0;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>My Free Blog</h1>
     <p>Thoughts on Freedom & Expression</p>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
-
-  <div class="post">
-  <h2>Qur’an vs Science – A Dialogue of Faith and Reason</h2>
-  <p>Posted on April 21, 2026</p>
-
-  <h3>Introduction</h3>
-  <p>Humanity has always searched for truth — sometimes through revelation, sometimes through observation. The Qur’an presents itself as divine guidance, while modern science builds knowledge through experiment and evidence. The tension and dialogue between these two paths often raise questions: do they conflict, or can they coexist?</p>
-
-  <h3>Qur’an and Hadith Perspective</h3>
-  <p>The Qur’an repeatedly calls people to reflect on the natural world:</p>
-  <blockquote>“Indeed, in the creation of the heavens and the earth, and the alternation of the night and day, are signs for those of understanding.” (Qur’an 3:190)</blockquote>
-  <p>Hadith also emphasize seeking knowledge:</p>
-  <blockquote>Prophet Muhammad (peace be upon him) said: “Seeking knowledge is obligatory upon every Muslim.” (Sunan Ibn Majah, Book of Sunnah, Hadith 224)</blockquote>
-  <p>These texts encourage curiosity and reflection, but they are often interpreted differently depending on context.</p>
-
-  <h3>Science Perspective</h3>
-  <p>Science relies on testable evidence. For example:</p>
-  <ul>
-    <li><strong>Cosmology:</strong> The Big Bang theory suggests the universe began ~13.8 billion years ago, expanding from a singularity.</li>
-    <li><strong>Biology:</strong> Evolution explains the diversity of life through natural selection.</li>
-    <li><strong>Medicine:</strong> Germ theory shows diseases are caused by microorganisms, not spiritual causes alone.</li>
-  </ul>
-  <p>These findings sometimes challenge traditional interpretations of scripture, yet they also resonate with the Qur’anic call to “observe” and “reflect.”</p>
-
-  <h3>Points of Tension</h3>
-  <ul>
-    <li><strong>Age of the Universe:</strong> Qur’an verses describe creation in “six days,” while science measures billions of years.</li>
-    <li><strong>Human Origins:</strong> Qur’an speaks of Adam created from clay, while science traces humans through evolutionary lineage.</li>
-    <li><strong>Natural Phenomena:</strong> Some hadith describe eclipses as signs of divine power, while science explains them through orbital mechanics.</li>
-  </ul>
-
-  <h3>Conclusion</h3>
-  <p>The dialogue between Qur’an and science is not about proving one wrong, but about how humans interpret meaning. Revelation inspires moral and spiritual reflection, while science explains mechanisms of the natural world. Together, they shape how societies wrestle with truth, doubt, and discovery.</p>
-
-      
-   <!-- Like button -->
-  <span class="likebtn-wrapper" data-theme="custom" data-identifier="post1"></span> 
-    </article>
-  </div>
 
   <footer>
-    <p>&copy; 2026 My Blog | All Rights Reserved</p>
+    <p>© 2026 My Blog | All Rights Reserved</p>
   </footer>
-
-  <script>
-    document.addEventListener("click", e=>{
-      let r=document.createElement("div");
-      r.className="ripple";document.body.appendChild(r);
-      let s=80;r.style.width=r.style.height=s+"px";
-      r.style.left=(e.clientX-s/2)+"px";
-      r.style.top=(e.clientY-s/2)+"px";
-      r.onanimationend=()=>r.remove();
-    });
-  </script>
-<script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;
-var a=d.createElement(e);a.id="likebtn_wjs";a.src=s;
-d.getElementsByTagName("head")[0].appendChild(a);})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
 </body>
 </html>
+
