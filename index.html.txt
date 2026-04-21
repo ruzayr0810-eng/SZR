@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>My Blog</title>
+  <style>
+    body {margin:0;font-family:Arial,sans-serif;background:#f4f4f4;}
+    header {background:#222;color:#fff;padding:20px;text-align:center;}
+    nav {background:#444;padding:10px;text-align:center;}
+    nav a {color:#fff;margin:0 10px;text-decoration:none;}
+    .container {width:80%;margin:auto;padding:20px;background:#fff;}
+    article {margin-bottom:20px;border-bottom:1px solid #ddd;padding-bottom:10px;}
+    footer {background:#222;color:#fff;text-align:center;padding:10px;margin-top:20px;}
+    .ripple {
+      position:absolute;border-radius:50%;
+      background:rgba(0,200,255,0.6);
+      transform:scale(0);animation:ripple 0.6s linear;
+      pointer-events:none;
+    }
+    @keyframes ripple {to{transform:scale(4);opacity:0;}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Free Blog</h1>
+    <p>Thoughts on Freedom & Expression</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+    <article>
+      <h2>First Post Title</h2>
+      <p><small>Posted on April 21, 2026</small></p>
+      <p>This is my first blog post. Here I’ll share my ideas freely and securely.</p>
+    </article>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 My Blog | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    document.addEventListener("click", e=>{
+      let r=document.createElement("div");
+      r.className="ripple";document.body.appendChild(r);
+      let s=80;r.style.width=r.style.height=s+"px";
+      r.style.left=(e.clientX-s/2)+"px";
+      r.style.top=(e.clientY-s/2)+"px";
+      r.onanimationend=()=>r.remove();
+    });
+  </script>
+</body>
+</html>
