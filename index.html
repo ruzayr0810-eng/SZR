@@ -4,6 +4,19 @@
   <meta charset="UTF-8">
   <title>My Blog</title>
   <style>
+    <div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    this.page.url = window.location.href;
+    this.page.identifier = document.title;
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://YOUR-SHORTNAME.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
     body {margin:0;font-family:Arial,sans-serif;background:#f4f4f4;}
     header {background:#222;color:#fff;padding:20px;text-align:center;}
     nav {background:#444;padding:10px;text-align:center;}
@@ -32,11 +45,48 @@
     <a href="#">Contact</a>
   </nav>
 
-  <div class="container">
+  <div class="post">
     <article>
-      <h2>First Post Title</h2>
+      <h2>Contradiction between the holy Quran & Science </h2>
       <p><small>Posted on April 21, 2026</small></p>
-      <p>This is my first blog post. Here I’ll share my ideas freely and securely.</p>
+      <p>✍️ Blog: Qur’an vs Science – A Dialogue of Faith and Reason
+      
+        Introduction
+Humanity has always searched for truth — sometimes through revelation, sometimes through observation. The Qur’an presents itself as divine guidance, while modern science builds knowledge through experiment and evidence. The tension and dialogue between these two paths often raise questions: do they conflict, or can they coexist?
+
+        Qur’an and Hadith Perspective
+The Qur’an repeatedly calls people to reflect on the natural world:
+
+“Indeed, in the creation of the heavens and the earth, and the alternation of the night and day, are signs for those of understanding.” (Qur’an 3:190)
+
+Hadith also emphasize seeking knowledge:
+
+Prophet Muhammad (peace be upon him) said: “Seeking knowledge is obligatory upon every Muslim.” (Sunan Ibn Majah, Book of Sunnah, Hadith 224)
+
+These texts encourage curiosity and reflection, but they are often interpreted differently depending on context.
+
+Science Perspective
+Science relies on testable evidence. For example:
+
+Cosmology: The Big Bang theory suggests the universe began ~13.8 billion years ago, expanding from a singularity.
+
+Biology: Evolution explains the diversity of life through natural selection.
+
+Medicine: Germ theory shows diseases are caused by microorganisms, not spiritual causes alone.
+
+These findings sometimes challenge traditional interpretations of scripture, yet they also resonate with the Qur’anic call to “observe” and “reflect.”
+
+Points of Tension
+Age of the Universe: Qur’an verses describe creation in “six days,” while science measures billions of years.
+
+Human Origins: Qur’an speaks of Adam created from clay, while science traces humans through evolutionary lineage.
+
+Natural Phenomena: Some hadith describe eclipses as signs of divine power, while science explains them through orbital mechanics.
+
+Conclusion
+The dialogue between Qur’an and science is not about proving one wrong, but about how humans interpret meaning. Revelation inspires moral and spiritual reflection, while science explains mechanisms of the natural world. Together, they shape how societies wrestle with truth, doubt, and discovery..</p>
+   <!-- Like button -->
+  <span class="likebtn-wrapper" data-theme="custom" data-identifier="post1"></span> 
     </article>
   </div>
 
@@ -54,5 +104,8 @@
       r.onanimationend=()=>r.remove();
     });
   </script>
+<script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;
+var a=d.createElement(e);a.id="likebtn_wjs";a.src=s;
+d.getElementsByTagName("head")[0].appendChild(a);})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
 </body>
 </html>
